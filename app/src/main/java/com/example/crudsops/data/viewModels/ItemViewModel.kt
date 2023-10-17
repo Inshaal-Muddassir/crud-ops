@@ -15,7 +15,7 @@ class ItemViewModel : ViewModel() {
 
     var lst = MutableLiveData<ArrayList<Item>>()
 
-    init {
+    fun listenDb() {
         db.collection("users")
             .document(auth.currentUser!!.uid)
             .collection("items")

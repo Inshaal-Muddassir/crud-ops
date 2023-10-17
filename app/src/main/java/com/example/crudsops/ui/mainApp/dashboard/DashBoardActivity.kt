@@ -66,6 +66,7 @@ class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     }
 
     private fun observeData() {
+        itemViewModel.listenDb()
         itemViewModel.lst.observe(this) {
             recyclerView.adapter = ItemRecyclerAdapter(it, this)
         }
