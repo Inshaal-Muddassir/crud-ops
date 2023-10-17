@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">CRUDS Ops</string>
+
+    <!--    General-->
+    <string name="et_email_hint">Email</string>
+    <string name="et_password_hint">Password</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_log_in">Log In</string>
+    <string name="btn_send_reset_link">Reset Password</string>
+    <string name="iv_des_back_button">Back Button</string>
+    <string name="iv_des_delete_item">Delete Item</string>
+    <string name="iv_des_done">Delete Item</string>
+    <string name="iv_des_cancel">Delete Item</string>
+    <string name="tv_title_hint">Item Title</string>
+    <string name="tv_description_hint">Item Description</string>
+    <string name="fab_add_new_item_description">Add New Item</string>
+
+    <!--    Navigation-->
+    <string name="nav_menu_logout">Logout</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <!--    login activity-->
+    <string name="login_tv_forgot_password">Forgot Password</string>
+
+    <!--    signup activity-->
+    <string name="signup_title">Sign Up</string>
+
+    <!--    reset password activity-->
+    <string name="reset_password_title">Forgot Password</string>
+
+    <!--    sheet create new item-->
+    <string name="sheet_create_new_item_tv_create_title">Create New Item</string>
+
+    <!--    view item activity-->
+    <string name="view_item_title">Item Details</string>
+    <string name="view_item_tv_title">Title</string>
+    <string name="view_item_tv_description">Description</string>
+    <string name="view_item_tv_edit">Edit Item</string>
+
+    <!--    sheet edit item-->
+    <string name="sheet_edit_item_tv_edit_title">Edit Item</string>
+
+</resources>

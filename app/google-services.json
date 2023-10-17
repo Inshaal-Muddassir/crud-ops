@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647528403426",
+    "project_id": "testing-67740",
+    "storage_bucket": "testing-67740.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647528403426:android:720307805e6869c4af69bb",
+        "android_client_info": {
+          "package_name": "com.example.crudsops"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0q3lP7ua8N55HbdoFfhUc31NwmtKm3Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
