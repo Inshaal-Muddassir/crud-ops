@@ -3,12 +3,10 @@ package com.example.crudsops.ui.mainApp.dashboard
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.crudsops.databinding.ItemViewBinding
 import com.example.crudsops.data.Item
-import com.example.crudsops.data.viewModels.ItemViewModel
+import com.example.crudsops.databinding.ItemViewBinding
 
 class ItemRecyclerAdapter(
-    val viewModel: ItemViewModel,
     val items: ArrayList<Item>,
     var callBackListener: CallBackListener
 ) :
@@ -44,7 +42,7 @@ class ItemRecyclerAdapter(
         fun bind(item: Item) {
             binding.tvTitle.text = item.title
             binding.ivDelete.setOnClickListener {
-                viewModel.remove(item)
+                callBackListener.onItemRemoveClicked(item)
             }
             binding.content.setOnClickListener {
                 callBackListener.onItemClicked(item)
@@ -55,5 +53,6 @@ class ItemRecyclerAdapter(
 
     interface CallBackListener {
         fun onItemClicked(item: Item)
+        fun onItemRemoveClicked(item: Item)
     }
 }

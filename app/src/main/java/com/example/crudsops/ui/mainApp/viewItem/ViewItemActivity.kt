@@ -53,6 +53,8 @@ class ViewItemActivity : AppCompatActivity(), EditItemBottomSheet.CallbackListen
 
     // call back from edit item bottom sheet
     override fun onDataChanged(title: String, description: String) {
+        this.title = title
+        this.description = description
         binding.tvItemTitle.text = title
         binding.tvItemDescription.text = description
     }

@@ -1,5 +1,6 @@
 package com.example.crudsops.ui.mainApp.dashboard
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,8 +67,24 @@ class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     private fun observeData() {
         itemViewModel.lst.observe(this) {
-            recyclerView.adapter = ItemRecyclerAdapter(itemViewModel, it, this)
+            recyclerView.adapter = ItemRecyclerAdapter(it, this)
         }
+    }
+
+    // callback from item recycler adapter
+    override fun onItemRemoveClicked(item: Item) {
+        // dialog box to take confirmation from user
+        val dialog = AlertDialog.Builder(this)
+        dialog.setTitle("Delete Item?")
+        dialog.setMessage("Do you want to delete \"${item.title}\"?")
+        dialog.setPositiveButton("Yes") { _, _ ->
+            itemViewModel.remove(item)
+        }
+        dialog.setNegativeButton("Cancel") { _, _ ->
+        }
+        dialog.setCancelable(false)
+        if (!isFinishing)
+            dialog.show()
     }
 
     // callback from item recycler adapter
